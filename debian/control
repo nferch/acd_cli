@@ -1,0 +1,13 @@
+Source: acd-cli
+Section: python
+Priority: extra
+Maintainer: Nathan Ferch <nf+debian@marginal.net>
+Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 0.8)
+Standards-Version: 3.9.5
+
+Package: acd-cli
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python3.4 | python3.5, ${misc:Pre-Depends}
+Depends: ${python:Depends}, ${misc:Depends}
+Description: command line interface and FUSE filesystem for Amazon (Cloud) Drive
+

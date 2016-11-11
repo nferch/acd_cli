@@ -1,0 +1,2 @@
+%:
+	dh $@ --with python-virtualenv --python python3.2
