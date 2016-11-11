@@ -1,5 +1,6 @@
 import os
 import re
+from pip.req import parse_requirements
 from setuptools import setup, find_packages
 from distutils.version import StrictVersion
 import acdcli
@@ -15,8 +16,8 @@ repl = ('`([^`]*?) <(docs/)?(.*?)\.rst>`_',
 version = acdcli.__version__
 StrictVersion(version)
 
-dependencies = ['appdirs', 'colorama', 'fusepy', 'python_dateutil',
-                'requests>=2.1.0,!=2.9.0', 'requests_toolbelt!=0.5.0']
+with open('requirements.txt') as f:
+    dependencies = f.read().splitlines()
 doc_dependencies = ['sphinx_paramlinks']
 test_dependencies = ['httpretty<0.8.11', 'mock']
 
