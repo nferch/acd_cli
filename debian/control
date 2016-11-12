@@ -2,7 +2,7 @@ Source: acd-cli
 Section: python
 Priority: extra
 Maintainer: Nathan Ferch <nf+debian@marginal.net>
-Build-Depends: debhelper (>= 9), python, dh-virtualenv (>= 0.8)
+Build-Depends: debhelper (>= 9), python3.4 | python3.5, dh-virtualenv (>= 0.8)
 Standards-Version: 3.9.5
 
 Package: acd-cli
